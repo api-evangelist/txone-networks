@@ -1,0 +1,128 @@
+generated: '2026-09-01'
+method: probed
+source: https://www.txone.com/ + https://help.txone.com/ + https://my.txone.com/
+note: >-
+  Every named /.well-known/ path was probed on all three TXOne hosts on 2026-09-01
+  and NOT ONE returned a document. www.txone.com and help.txone.com return clean
+  404s. my.txone.com (the MyTXOne customer portal) is a single-page-app catch-all:
+  it answers HTTP 200 with the same 1,766-byte JavaScript shell for every path,
+  including the negative-control path that cannot exist, so none of its 200s is a
+  hit. hit_count is 0 and NO WellKnown / SecurityTxt / AgentCard pointer is emitted
+  from this file. TXOne does publish a vulnerability disclosure policy and a PSIRT
+  contact, but as HTML pages under /legal/ and /psirt/, not as an RFC 9116
+  security.txt.
+hit_count: 0
+hosts:
+- host: https://www.txone.com
+  soft_404_control:
+    path: /.well-known/txone-networks-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 9121
+    result: passed
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://help.txone.com
+  soft_404_control:
+    path: /.well-known/txone-networks-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 177737
+    result: passed
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://my.txone.com
+  catch_all: true
+  soft_404_control:
+    path: /.well-known/txone-networks-negative-control-7f3ab91c.json
+    status: 200
+    bytes: 1766
+    result: failed
+    note: >-
+      Returned HTTP 200 with the MyTXOne SPA shell for a path that cannot exist,
+      so every 200 on this host is discarded as a false positive.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    hit: false
+    note: SPA shell (1766 bytes, text/html) - not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    hit: false
+    note: SPA shell (1766 bytes, text/html) - not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    hit: false
+    note: SPA shell (1766 bytes, text/html) - not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    hit: false
+    note: SPA shell (1766 bytes, text/html) - not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    hit: false
+    note: SPA shell (1766 bytes, text/html) - not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    hit: false
+    note: SPA shell (1766 bytes, text/html) - not a document
+  - path: /.well-known/ucp.json
+    status: 200
+    hit: false
+    note: SPA shell (1766 bytes, text/html) - not a document
+  - path: /.well-known/acp.json
+    status: 200
+    hit: false
+    note: SPA shell (1766 bytes, text/html) - not a document
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    hit: false
+    note: SPA shell (1766 bytes, text/html) - not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    hit: false
+    note: SPA shell (1766 bytes, text/html) - not an AgentCard
+  - path: /.well-known/agent.json
+    status: 200
+    hit: false
+    note: SPA shell (1766 bytes, text/html) - not an AgentCard

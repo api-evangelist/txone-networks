@@ -1,0 +1,111 @@
+generated: '2026-09-01'
+method: searched
+source: https://www.txone.com/compliance/
+note: >-
+  TXOne publishes no public API contract, so none of the API-level cross-cutting
+  standards below could be verified against a spec - they are recorded as
+  not_applicable with an explicit reason rather than as failures. The
+  product-security and regulatory entries ARE verifiable and are recorded with the
+  page that states them.
+standards:
+- id: iec-62443-4-1
+  name: ISA/IEC 62443-4-1 Secure Product Development Lifecycle
+  conforms: true
+  scope: organization
+  evidence:
+    statement: >-
+      "TXOne holds IEC 62443-4-1 certification for secure development practices and
+      delivers purpose-built solutions addressing all seven foundational
+      requirements across your industrial environment."
+    url: https://www.txone.com/compliance/isa-iec-62443/
+    status: 200
+- id: iec-62443
+  name: ISA/IEC 62443 (Industrial Automation and Control Systems security)
+  conforms: partial
+  scope: product-capability
+  evidence:
+    statement: >-
+      TXOne publishes a dedicated 62443 page describing how the Edge, Stellar and
+      Element series map to zones/conduits and the seven foundational requirements.
+      This is capability coverage for customers, not a certification of every
+      product against 62443-3-3/4-2.
+    url: https://www.txone.com/compliance/isa-iec-62443/
+    status: 200
+- id: nerc-cip
+  name: NERC CIP
+  conforms: supports
+  scope: customer-regime-coverage
+  evidence:
+    url: https://www.txone.com/compliance/nerc-cip/
+    status: 200
+- id: nis2
+  name: EU NIS2 Directive
+  conforms: supports
+  scope: customer-regime-coverage
+  evidence:
+    url: https://www.txone.com/compliance/nis2/
+    status: 200
+- id: sec-cybersecurity
+  name: SEC Cybersecurity Disclosure Rules
+  conforms: supports
+  scope: customer-regime-coverage
+  evidence:
+    url: https://www.txone.com/compliance/sec-cybersecurity/
+    status: 200
+- id: soci-act
+  name: Australian Security of Critical Infrastructure (SOCI) Act
+  conforms: supports
+  scope: customer-regime-coverage
+  evidence:
+    url: https://www.txone.com/compliance/soci-act/
+    status: 200
+- id: tsa-security-directives
+  name: TSA Pipeline and Rail Security Directives
+  conforms: supports
+  scope: customer-regime-coverage
+  evidence:
+    url: https://www.txone.com/compliance/tsa-security/
+    status: 200
+- id: coordinated-vulnerability-disclosure
+  name: Coordinated vulnerability disclosure (90-day window, 72-hour acknowledgement)
+  conforms: true
+  scope: organization
+  evidence:
+    url: https://www.txone.com/legal/disclosure-policy/
+    status: 200
+- id: rfc-9116-security-txt
+  name: RFC 9116 security.txt
+  conforms: false
+  evidence:
+    note: >-
+      Probed on www.txone.com, help.txone.com and my.txone.com on 2026-09-01;
+      no security.txt is served on any host.
+    url: https://www.txone.com/.well-known/security.txt
+    status: 404
+- id: oauth2
+  name: OAuth 2.0
+  conforms: not_applicable
+  evidence:
+    note: No public API contract or public authorization server to evaluate.
+- id: oidc
+  name: OpenID Connect
+  conforms: not_applicable
+  evidence:
+    note: >-
+      /.well-known/openid-configuration returns 404 on every TXOne host probed.
+    url: https://www.txone.com/.well-known/openid-configuration
+    status: 404
+- id: rfc9457
+  name: RFC 9457 Problem Details for HTTP APIs
+  conforms: not_applicable
+  evidence:
+    note: No public OpenAPI to inspect for application/problem+json responses.
+domain_standard:
+  market: OT / ICS cybersecurity
+  candidate: ISA/IEC 62443
+  declared_in_contract: false
+  note: >-
+    ISA/IEC 62443 is the domain standard for this market and TXOne is certified
+    against 62443-4-1 at the process level, but domain_standard_conformance reads
+    the CONTRACT and TXOne publishes none - there is no spec in which a 62443 shape
+    could be declared. Recorded as not verifiable, not as a failure.

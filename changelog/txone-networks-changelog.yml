@@ -1,0 +1,83 @@
+generated: '2026-09-01'
+method: searched
+source: https://help.txone.com/
+docs: https://help.txone.com/
+note: >-
+  TXOne publishes dated release notes per product in the TXOne Help Center
+  (Document360). There is no single API changelog because there is no public API
+  product; the changelog tracks the shipped appliance and console software
+  (Edge, Stellar, Element and Sennin/Sage families). 104 release-note articles were
+  enumerated from https://help.txone.com/sitemap-en.xml on 2026-09-01. The dates
+  below are the sitemap lastmod values for each article - the closest published
+  date signal the Help Center exposes - not a separately stated release date.
+scheme: per-product semantic-ish versioning (product name + major.minor[.patch/build])
+current_versions:
+  stellar-series: '5.0'
+  sageone: '2.1'
+  edgeone: '2.6.11'
+  edgefire: 2.2.8-1014
+  elementone: 1.31.2
+  safe-port: 1.0-1060
+  portable-inspector-pro: 1.0-1096
+  virtual-portable-inspector: 1.0-1104
+entries:
+- product: Safe Port
+  version: 1.0-1060
+  date: '2026-07-31'
+  url: https://help.txone.com/docs/txone-safe-port-1-0-1060-is-now-available
+- product: ElementOne
+  version: 1.31.2
+  date: '2026-07-31'
+  url: https://help.txone.com/docs/txone-elementone-1-31-2-is-now-available
+- product: Virtual Portable Inspector
+  version: 1.0-1104
+  date: '2026-07-31'
+  url: https://help.txone.com/docs/txone-virtual-portable-inspector-1-0-1104-is-now-available
+- product: Stellar Series
+  version: '5.0'
+  date: '2026-07-07'
+  url: https://help.txone.com/docs/txone-stellar-series-5-0-en-is-now-available
+- product: ElementOne
+  version: 1.29.0
+  date: '2026-07-06'
+  url: https://help.txone.com/docs/txone-elementone-1-29-0-is-now-available
+- product: EdgeFire
+  version: 2.2.8-1014
+  date: '2026-06-02'
+  url: https://help.txone.com/docs/txone-edgefire-2-2-8-1014-is-now-available
+- product: EdgeOne
+  version: 2.6.11
+  date: '2026-06-02'
+  url: https://help.txone.com/docs/txone-edgeone-2-6-11-is-now-available
+- product: Safe Port
+  version: 1.0-1056
+  date: '2026-05-13'
+  url: https://help.txone.com/docs/txone-safe-port-1-0-1056-is-now-available
+- product: Portable Inspector Pro
+  version: 1.0-1096
+  date: '2026-05-13'
+  url: https://help.txone.com/docs/txone-portable-inspector-pro-1-0-1096-is-now-available
+- product: Stellar Series
+  version: 3.3 Patch 1
+  date: '2026-03-11'
+  url: https://help.txone.com/docs/txone-stellar-series-33-patch-1-en-is-now-available
+- product: SageOne
+  version: '2.1'
+  date: '2025-09-15'
+  url: https://help.txone.com/docs/txone-sageone-21-is-now-available
+  breaking: false
+  highlights:
+  - >-
+    "OpenAPI Support: Now supports asset management, health checks, and
+    vulnerability APIs. Refer to SageOne OpenAPI (1.0) for full details." - the
+    only first-party statement found that TXOne ships an OpenAPI-described API.
+    The referenced "SageOne OpenAPI (1.0)" is not hyperlinked and is not published
+    on any public TXOne host; it ships inside the on-premises SageOne console.
+  - VDS Pattern Management, One-Day Vulnerabilities ticket category, vulnerability email notifications
+  - Vulnerability management now runs strictly on-premises
+- product: SageOne
+  version: '2.0'
+  date: '2025-05-08'
+  url: https://help.txone.com/docs/txone-sageone-20
+  highlights:
+  - Users can generate API tokens to interact with SageOne via supported API functions

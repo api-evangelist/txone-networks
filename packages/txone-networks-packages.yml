@@ -1,0 +1,33 @@
+generated: '2026-09-01'
+method: searched
+source: registry.npmjs.org, pypi.org, api.github.com/orgs/TXOne-Networks
+package_count: 0
+official_sdk_count: 0
+note: >-
+  TXOne Networks publishes NO first-party client libraries. npm search for "txone"
+  returns zero packages; registry.npmjs.org/txone and /txone-sdk both 404;
+  pypi.org/pypi/txone/json 404s. The TXOne-Networks GitHub organization
+  (https://github.com/TXOne-Networks, 7 public repos) is a THREAT-RESEARCH
+  organization, not an SDK organization - TCSA, CuIDA (BHUSA'24 CUDA decompilation
+  agent), AMSI.NotFail, vpn-gremlins and ntkrnlProtectScan are research and
+  tooling releases with no published registry artifact and no relationship to any
+  TXOne product API. No `SDKs` pointer is emitted, because there is no SDK.
+registries_probed:
+- registry: npm
+  query: txone
+  result: 0 packages
+- registry: npm
+  name: txone
+  status: 404
+- registry: npm
+  name: txone-sdk
+  status: 404
+- registry: pypi
+  name: txone
+  status: 404
+- registry: github
+  org: TXOne-Networks
+  status: 200
+  public_repos: 7
+  first_party_sdks: 0
+packages: []

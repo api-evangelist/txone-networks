@@ -1,0 +1,20 @@
+generated: '2026-09-01'
+method: searched
+source: https://www.txone.com/ + https://help.txone.com/
+limit_count: 0
+note: >-
+  No rate limits are published, because no public API is published. TXOne's
+  API surfaces (SageOne OpenAPI 1.0, the StellarOne open API, EdgeOne API
+  management) run inside customer-deployed on-premises consoles and appliances, so
+  there is no public endpoint to observe headers on and no public reference page
+  stating quotas. Probes of www.txone.com/api, /developers and /pricing all
+  returned 404, and the 216-article TXOne Help Center sitemap contains zero
+  articles matching api / rest / token / webhook / integration. An honest zero.
+evidence:
+- url: https://www.txone.com/api
+  status: 404
+- url: https://www.txone.com/developers
+  status: 404
+- url: https://help.txone.com/sitemap-en.xml
+  status: 200
+rate_limits: []
