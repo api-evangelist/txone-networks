@@ -19,6 +19,19 @@ description: >-
   API management) are reachable only inside a customer's own deployment. TXOne
   publishes no public developer portal, API reference or pricing page.
 url: https://raw.githubusercontent.com/api-evangelist/txone-networks/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - rate-limits
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://www.txone.com/icon.png
 x-type: company
 x-source: harvest:secondary-market
